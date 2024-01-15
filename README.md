@@ -24,7 +24,7 @@ The ultimate outcome of this project is shared on [HuggingFace](https://huggingf
 </p>
 
 ## Dataset
-The images used for fune tuning model is obtained from [Kaggle](https://www.kaggle.com/datasets/knucharat/pop-cats). It contains 20 common breeds of cat: 
+The images used for fune tuning model is obtained from [Kaggle](https://www.kaggle.com/datasets/knucharat/pop-cats). It contains 20 common breeds of cat, each containing 500 jpg images.
 1. Abyssinian
 2. American Curl
 3. American Shorthair
@@ -45,6 +45,26 @@ The images used for fune tuning model is obtained from [Kaggle](https://www.kagg
 18. Scottish Fold
 19. Siamese
 20. Sphynx
-and each class contains 500 jpg images.
 
+![Cat_images](figures/data_samples.JPG)
+<p align="center">
+    Samples of dataset. I add corresponding Mandarin name for each breed but it does not display appropriately.
+</p>
+
+## Approach
+
+Fine-tuning a model can be achieved through various approaches, each with its unique advantages and considerations:
+
+1. **Replace Model's Last Layer:**
+   - This involves substituting the model's last layer, specifically the id2label and label2id maps, with customized maps. The model is then retrained. While this approach may be time-consuming, it is expected to yield optimal results.
+
+2. **Transfer Learning with Additional Neural Network:**
+   - Remove the last layer and fix the pre-trained model. Utilize the output of this model as the input for a smaller, additional neural network (NN). This approach is more efficient, especially when the pre-trained model has already learned crucial features from ImageNet.
+
+3. **Fine-tuning Selected Layers:**
+   - Retain most parameters of the pre-trained model and train some of its last layers alongside our customized NN. This middle-ground choice balances the trade-off between model training cost and the enhancement of model capabilities.
+
+For this project, I opted for the first approach to gain insights into the training cost associated with larger models like VIT. However, considering the effective feature learning observed in the testing stage, the other two approaches might be more reasonable choices for future experiments.
+
+The project ran on Colab with a V100 GPU. Due to environment limitations, the batch size was set to 64, and `num_workers` was set to zero. Each epoch took approximately 4 minutes.
 
