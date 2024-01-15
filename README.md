@@ -24,7 +24,7 @@ The ultimate outcome of this project is shared on [HuggingFace](https://huggingf
 </p>
 
 ## Dataset
-The images used for fune tuning model is obtained from [Kaggle](https://www.kaggle.com/datasets/knucharat/pop-cats). It contains 20 common breeds of cat, each containing 500 jpg images.
+The images used for fine tuning model is obtained from [Kaggle](https://www.kaggle.com/datasets/knucharat/pop-cats). It contains 20 common breeds of cat, each containing 500 jpg images.
 1. Abyssinian
 2. American Curl
 3. American Shorthair
