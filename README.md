@@ -68,3 +68,11 @@ For this project, I opted for the first approach to gain insights into the train
 
 The project ran on Colab with a V100 GPU. Due to environment limitations, the batch size was set to 64, and `num_workers` was set to zero. Each epoch took approximately 4 minutes.
 
+## Testing and Future Direction
+In order to assess the model's performance, I conducted testing using cat pictures sourced from various Mandarin websites through online searches. The objective was to avoid sampling pictures already present in the training dataset. Additionally, I specifically chose non-JPG files when available. Out of 20 testing instances, the model yielded 18 correct results.
+
+As part of future directions, there is an opportunity to further expand and refine the testing process. Consider exploring a broader variety of images and potentially incorporating more diverse datasets to enhance the model's robustness. Additionally, continuous evaluation and refinement of the model's performance with real-world data will contribute to its ongoing improvement.
+
+
+
+
