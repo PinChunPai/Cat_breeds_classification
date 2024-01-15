@@ -14,7 +14,7 @@ The core of the project revolves around the utilization of the [vision transform
 </p>
 
 ## Result
-In order to establish a baseline, I randomly selected 15 images from the three existing breeds in VIT targets (Persian, Egyptian Mau, Siamese) to test the model before fine-tuning. The accuracy at this initial stage was 66.7% (refer to [Cat_breeds_basic.ipynb](colab folder) for detailed information). After undergoing 260 epochs of fine-tuning, the model converged to an impressive accuracy of 92.6% on the test dataset. Subsequently, I conducted an additional training run on the entire dataset for 15 more epochs. Further details can be found in the colab folder.
+In order to establish a baseline, I randomly selected 15 images from the three existing breeds in VIT targets (Persian, Egyptian Mau, Siamese) to test the model before fine-tuning. The accuracy at this initial stage was 66.7% (refer to `Cat_breeds_basic.ipynb` in colab folder for detailed information). After undergoing 260 epochs of fine-tuning, the model converged to an impressive accuracy of 92.6% on the test dataset. Subsequently, I conducted an additional training run on the entire dataset for 15 more epochs. Further details can be found in the colab folder.
 
 The ultimate outcome of this project is shared on [HuggingFace](https://huggingface.co/PinChunPai/cat20_breed_fine_tune) and subsequently employed in constructing a [website application](https://huggingface.co/spaces/PinChunPai/cat20_breeds). This platform enables the public to assess the model's performance by uploading their own cat pictures, bringing the evaluation process into the real world and fostering broader engagement.
 
@@ -22,3 +22,29 @@ The ultimate outcome of this project is shared on [HuggingFace](https://huggingf
 <p align="center">
     Demonstration of website application.
 </p>
+
+## Dataset
+The images used for fune tuning model is obtained from [Kaggle](https://www.kaggle.com/datasets/knucharat/pop-cats). It contains 20 common breeds of cat: 
+1. Abyssinian
+2. American Curl
+3. American Shorthair
+4. Bengal
+5. Birman
+6. Bombay
+7. British Shorthair
+8. Egyptian Mau
+9. Exotic Shorthair
+10. Himalayan
+11. Maine Coon
+12. Manx
+13. Munchkin
+14. Norwegian Forest
+15. Persian
+16. Ragdoll
+17. Russian Blue
+18. Scottish Fold
+19. Siamese
+20. Sphynx
+and each class contains 500 jpg images.
+
+
