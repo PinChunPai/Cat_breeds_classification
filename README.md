@@ -13,7 +13,7 @@ The core of the project revolves around the utilization of the [vision transform
     https://arxiv.org/abs/2010.11929
 </p>
 
-## Result
+## Results
 In order to establish a basic standard, I randomly selected 15 images from the three existing breeds in VIT targets (Persian, Egyptian Mau, Siamese) to test the vanilla code before fine-tuning. The accuracy at this initial stage was 66.7% (refer to `Cat_breeds_basic.ipynb` in colab folder for detailed information). After undergoing 260 epochs of fine-tuning, the model converged to an impressive accuracy of 92.6% on the test dataset. Subsequently, I conducted an additional training run on the entire dataset for 15 more epochs. Further details can be found in the colab folder.
 
 The ultimate outcome of this project is shared on [HuggingFace](https://huggingface.co/PinChunPai/cat20_breed_fine_tune) and subsequently employed in constructing a [website application](https://huggingface.co/spaces/PinChunPai/cat20_breeds). This platform enables the public to assess the model's performance by uploading their own cat pictures, bringing the evaluation process into the real world and fostering broader engagement.
